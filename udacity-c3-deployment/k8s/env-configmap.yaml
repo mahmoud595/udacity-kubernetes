@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: udagramahmeddev
+  AWS_PROFILE: default
+  AWS_REGION: us-east-2
+  JWT_SECRET: hello
+  POSTGRESS_DB: udagramahmeddev
+  POSTGRESS_HOST: udagramahmeddev.ckv76pqsut0e.us-east-2.rds.amazonaws.com
+  POSTGRESS_USERNAME: udagramahmeddev
+  POSTGRESS_PASSWORD: 7asanin$
+  URL: http://localhost:8100  
+metadata:
+  name: env-config
