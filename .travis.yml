@@ -3,7 +3,7 @@ language: minimal
 services: docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.23.2 DOCKER_USERNAME=ahasanin DOCKER_PASSWORD='7asanin$$'
+  - DOCKER_COMPOSE_VERSION=1.23.2
 before_install:
   - docker -v && docker-compose -v
   - sudo rm /usr/local/bin/docker-compose
@@ -20,10 +20,10 @@ before_install:
 
 
 install:
-  - kubectl apply -f udacity-c3-deployment/k8s/aws-secret.yaml
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
   - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml push
+  - kubectl apply -f udacity-c3-deployment/k8s/aws-secret.yaml
   - kubectl apply -f udacity-c3-deployment/k8s/env-configmap.yaml
   - kubectl apply -f udacity-c3-deployment/k8s/backend-feed-serivice.yaml
   - kubectl apply -f udacity-c3-deployment/k8s/backend-user-serivice.yaml
