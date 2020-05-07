@@ -3,7 +3,7 @@ language: minimal
 services: docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.23.2
+  - DOCKER_COMPOSE_VERSION=1.23.2 DOCKER_USERNAME=ahasanin DOCKER_PASSWORD=7asanin$$
 before_install:
   - docker -v && docker-compose -v
   - sudo rm /usr/local/bin/docker-compose
