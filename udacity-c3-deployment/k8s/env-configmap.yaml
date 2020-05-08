@@ -8,7 +8,7 @@ data:
   POSTGRESS_DB: udagramahmeddev
   POSTGRESS_HOST: udagramahmeddev.ckv76pqsut0e.us-east-2.rds.amazonaws.com
   POSTGRESS_USERNAME: udagramahmeddev
-  POSTGRESS_PASSWORD: 7asanin$
+  POSTGRESS_PASSWORD:
   URL: http://localhost:8100  
 metadata:
   name: env-config
